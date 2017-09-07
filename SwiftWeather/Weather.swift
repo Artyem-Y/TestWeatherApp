@@ -34,7 +34,7 @@ struct Weather {
     }
     
     
-    static let basePath = "https://api.darksky.net/forecast/YOUR_APIKEY/"
+    static let basePath = "https://api.darksky.net/forecast/d88815857ba9db209767384c02959c41/"
     
     static func forecast (withLocation location:CLLocationCoordinate2D, completion: @escaping ([Weather]?) -> ()) {
         
@@ -72,16 +72,7 @@ struct Weather {
         }
         
         task.resume()
-        
-        
-        
-        
-        
-        
-        
-        
     
     }
     
-
 }
