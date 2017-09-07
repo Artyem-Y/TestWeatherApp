@@ -30,7 +30,6 @@ struct Weather {
         self.summary = summary
         self.icon = icon
         self.temperature = temperature
-        
     }
     
     
@@ -67,12 +66,8 @@ struct Weather {
                 completion(forecastArray)
                 
             }
-            
-            
         }
         
         task.resume()
-    
     }
-    
 }

@@ -17,19 +17,15 @@ class WeatherTableViewController: UITableViewController, UISearchBarDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         searchBar.delegate = self
-        
         updateWeatherForLocation(location: "New York")
     }
-    
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
         if let locationString = searchBar.text, !locationString.isEmpty {
             updateWeatherForLocation(location: locationString)
         }
-        
     }
     
     func updateWeatherForLocation (location:String) {
@@ -44,9 +40,7 @@ class WeatherTableViewController: UITableViewController, UISearchBarDelegate {
                             DispatchQueue.main.async {
                                 self.tableView.reloadData()
                             }
-                            
                         }
-                        
                     })
                 }
             }
